@@ -1,0 +1,227 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #0c0415, #0e1012); /* Purple to Blue gradient */
+    color: #fff; /* All text white for contrast */
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.3); /* Slightly transparent for gradient */
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    z-index: 1000;
+    border-radius: 0 0 15px 15px;
+}
+
+.navbar .logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    color: #ae6bff;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    padding: 80px 20px;
+}
+.hero-text h1 {
+    font-size: 36px;
+    color: #fff;
+}
+.hero-text p {
+    margin: 15px 0;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+.hero-text .btn {
+    background: #6b90ff;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.hero-text .btn:hover {
+    background: #b547ff;
+}
+.hero-img img {
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+/* Sections */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05); /* Slight transparency */
+    margin: 20px auto;
+    border-radius: 15px;
+    max-width: 1200px;
+}
+
+/* Headings */
+section h2 {
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 32px;
+}
+
+/* About Me Cards */
+.about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+.about-card {
+    background: rgba(255, 255, 255, 0.1);
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    transition: transform 0.3s;
+}
+.about-card:hover {
+    transform: translateY(-10px);
+}
+.about-card i {
+    font-size: 36px;
+    color: #e4ff6b;
+    margin-bottom: 10px;
+}
+.about-card h3 {
+    margin-bottom: 10px;
+    color: #ffff6b;
+}
+.about-card p {
+    font-size: 14px;
+    color: #f0f0f0;
+}
+
+/* Skills */
+.skill {
+    max-width: 400px;
+    margin: 20px auto;
+    text-align: left;
+}
+.progress {
+    background: rgba(255,255,255,0.2);
+    height: 12px;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.bar {
+    height: 100%;
+    border-radius: 10px;
+}
+.bar.html { width: 90%; background: #f2ff43; }
+.bar.css { width: 80%; background: #00d2d3; }
+.bar.js { width: 60%; background: #feca57; }
+.bar.react { width: 40%; background: #48dbfb; }
+
+/* Projects */
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+.project-card:hover {
+    transform: translateY(-10px);
+}
+.project-card h3 {
+    color: #ceff6b;
+}
+.project-card p {
+    font-size: 14px;
+    color: #f0f0f0;
+}
+.project-card .btn-project {
+    display: inline-block;
+    margin-top: 10px;
+    background: #976bff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.project-card .btn-project:hover {
+    background: #476cff;
+}
+
+/* Contact Form */
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+input, textarea {
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+input::placeholder, textarea::placeholder {
+    color: #f0f0f0;
+}
+button {
+    background: #816bff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: #8447ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero { flex-direction: column-reverse; }
+    .about-cards, .project-container { flex-direction: column; align-items: center; }
+}
